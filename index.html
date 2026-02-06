@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
-        <!-- 應用程式內容將在後續實作中添加 -->
         <h1>Todo List</h1>
+
+        <div class="input-group">
+            <input type="text" id="todo-input" placeholder="按 Enter 新增待辦事項..." aria-label="新增待辦事項">
+            <button id="add-btn">新增</button>
+        </div>
+
+        <div class="filter-group">
+            <button class="filter-btn active" data-filter="all">全部</button>
+            <button class="filter-btn" data-filter="active">未完成</button>
+            <button class="filter-btn" data-filter="completed">已完成</button>
+        </div>
+
+        <ul id="todo-list" class="todo-list">
+            <!-- 待辦事項將由 JavaScript 動態產生 -->
+        </ul>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
